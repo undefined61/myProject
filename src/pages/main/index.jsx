@@ -2,7 +2,8 @@ import react, { Component } from "react";
 import { Menu } from 'antd';
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 import Route from "../../router"
-import './index.sass'
+import style from'./index.scss'
+console.log(style);
 const { SubMenu } = Menu;
 class Main extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class Main extends Component {
   render() {
     return (
       <div className="main">
-        <div className="aside">
+        <div className={style.aside}>
           <Menu
             onClick={this.handleClick}
             style={{ width: 256 }}
