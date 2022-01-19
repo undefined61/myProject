@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import { Menu } from 'antd';
 import { getArticleList } from './request'
-
+import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import One from "../one";
+import Test from "../test";
+import { Link , Route } from "react-router-dom";
+const { SubMenu } = Menu;
 class Create extends Component {
   constructor(props) {
     super(props)
+    console.log(props);
     this.state = {
       name: "2222"
     }
@@ -24,9 +29,23 @@ class Create extends Component {
   }
   render() {
     return (
-      <div className="name">
-        <button onClick={this.addClick}>{this.state.name}</button>
-
+      <div className="name" style={{display:'flex'}}>
+        <Menu
+          onClick={this.handleClick}
+          style={{ width: 256 }}
+          defaultSelectedKeys={['1']}
+          defaultOpenKeys={['sub1']}
+          mode="inline"
+        >
+          <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One">
+            <Menu.Item key="1"><Link to="/create/one">跳到页面one</Link></Menu.Item>
+            <Menu.Item key="2"><Link to="/create/test">跳到页面test</Link></Menu.Item>
+          </SubMenu>
+        </Menu>
+        <div>
+          <Route exact path='/create/one' component={One} ></Route>
+          <Route exact path='/create/test' component={Test} ></Route>
+        </div>
 
       </div>
     )

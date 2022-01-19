@@ -1,12 +1,13 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Create from "../pages/create";
-export default ()=>(<BrowserRouter>
-    <Routes>
-        <Route
-            exact
-            path='/create'
-            element={<Create/> }
-        />
-    </Routes>
-</BrowserRouter>
+import Login from "../pages/login";
+
+export default () => (<HashRouter>
+    <Switch>
+        <Route exact path='/' component={Login} />
+        <Route  path='/create/' component={Create} />
+          
+
+    </Switch>
+</HashRouter>
 );

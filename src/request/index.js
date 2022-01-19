@@ -4,7 +4,7 @@
  import axios from "axios";
 
  axios.defaults.timeout = 100000;
- axios.defaults.baseURL = "http://test.mediastack.cn/";
+ axios.defaults.baseURL = "https://fadmin.newryun.com/";
  
  /**
   * http request 拦截器
