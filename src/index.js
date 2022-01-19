@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Main from './pages/main'
 ReactDOM.render(
-  // <React.StrictMode>
+  <React.StrictMode>
     <Main />,
-  // </React.StrictMode>,
+   </React.StrictMode>,
   document.getElementById('root')
 );
 
