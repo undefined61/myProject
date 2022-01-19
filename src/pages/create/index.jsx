@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { Menu } from 'antd';
 import { getArticleList } from './request'
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
-import One from "../one";
-import Test from "../test";
-import { Link , Route } from "react-router-dom";
+import { MailOutlined } from '@ant-design/icons';
+import { Link } from "react-router-dom";
+import Route from "../../router/children"
 const { SubMenu } = Menu;
 class Create extends Component {
   constructor(props) {
@@ -29,7 +28,7 @@ class Create extends Component {
   }
   render() {
     return (
-      <div className="name" style={{display:'flex'}}>
+      <div className="name" style={{ display: 'flex' }}>
         <Menu
           onClick={this.handleClick}
           style={{ width: 256 }}
@@ -38,13 +37,12 @@ class Create extends Component {
           mode="inline"
         >
           <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One">
-            <Menu.Item key="1"><Link to="/create/one">跳到页面one</Link></Menu.Item>
-            <Menu.Item key="2"><Link to="/create/test">跳到页面test</Link></Menu.Item>
+            <Menu.Item key="1"><Link to="/create/one" replace>跳到页面one</Link></Menu.Item>
+            <Menu.Item key="2"><Link to="/create/test" replace>跳到页面test</Link></Menu.Item>
           </SubMenu>
         </Menu>
         <div>
-          <Route exact path='/create/one' component={One} ></Route>
-          <Route exact path='/create/test' component={Test} ></Route>
+          <Route />
         </div>
 
       </div>
