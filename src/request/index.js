@@ -4,7 +4,7 @@
  import axios from "axios";
 
  axios.defaults.timeout = 100000;
- axios.defaults.baseURL = "https://fadmin.newryun.com/";
+ axios.defaults.baseURL = "http://localhost:5000";
  
  /**
   * http request 拦截器

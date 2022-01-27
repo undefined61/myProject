@@ -28,7 +28,7 @@ class Create extends Component {
   }
   render() {
     return (
-      <div className="name" style={{ display: 'flex' }}>
+      <div className="name" style={{ display: 'flex',width:'100%',height:"100%" }}>
         <Menu
           onClick={this.handleClick}
           style={{ width: 256 }}
@@ -37,11 +37,11 @@ class Create extends Component {
           mode="inline"
         >
           <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One">
-            <Menu.Item key="1"><Link to="/create/one" replace>跳到页面one</Link></Menu.Item>
+            <Menu.Item key="1"><Link to="/create/one" replace>添加菜单</Link></Menu.Item>
             <Menu.Item key="2"><Link to="/create/test" replace>跳到页面test</Link></Menu.Item>
           </SubMenu>
         </Menu>
-        <div>
+        <div style={{display:'flex',alignItems:'center',justifyContent:'center',width:'100%',height:"100%"}}>
           <Route />
         </div>
 

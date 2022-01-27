@@ -9,6 +9,9 @@ class Login extends Component {
             name: "2222"
         }
     }
+    componentDidMount(){
+        login()
+    }
     onFinish = (values) => {
         console.log('Success:', values);
         const { username, password } = values
